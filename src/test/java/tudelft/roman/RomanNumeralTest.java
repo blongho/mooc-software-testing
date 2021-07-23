@@ -11,6 +11,7 @@ public class RomanNumeralTest {
         RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("I");
         Assertions.assertEquals(1, result);
+        Assertions.assertEquals(5, roman.convert("V"));
     }
 
     @Test
@@ -23,8 +24,9 @@ public class RomanNumeralTest {
     @Test
     public void numberWithSubtractiveNotation() {
         RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("IV");
-        Assertions.assertEquals(4, result);
+        int result = roman.convert("IXX");
+        //Assertions.assertEquals(4, result);
+        Assertions.assertEquals(19, result);
     }
 
     @Test
